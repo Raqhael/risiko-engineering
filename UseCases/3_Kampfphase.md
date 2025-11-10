@@ -1,11 +1,11 @@
 # 3. Kampfphase
 
-| Geschäftsprozess, Funktion   | Name, besteht aus zwei Wörtern. Objekt + Verb (was wird womit getan?). |
+| Geschäftsprozess, Funktion   | Kampfphase durchführen |
 | ---------------------------- | ------------------------------------------------------------------------------------------ |
-| Ziel, Ergebnisse             | globale Zielsetzung bei erfolgreicher Ausführung des Geschäftsprozesses |
-| Akteure                      | Rollen von Personen oder anderen Systemen, die den Geschäftsprozess auslösen oder daran beteiligt sind |
-| Vorbedingungen               | Erwarteter Zustand, bevor der Geschäftsprozess beginnt |
-| Auslösendes Ereignis         | Wenn dieses Ereignis eintritt, wird der Geschäftsprozess initiiert |
+| Ziel, Ergebnisse             | Der aktive Spieler versucht, mit seinen Truppen aus seinen bestehenden Ländern benachbarte Spieler anzugreifen, um deren Länder zu erobern. |
+| Akteure                      | Aktiver Spieler, Passiver Spieler |
+| Vorbedingungen               | Die Truppen des aktiven Spielers wurden mobilisiert. |
+| Auslösendes Ereignis         | Abschluss der Truppenmobilisierungsphase. |
 | Nachbedingung bei Erfolg     | Erwarteter Zustand nach erfolgreicher Ausführung des Geschäftsprozess, das heißt Ergebnis des Geschäftsprozesses |
 | Nachbedingung bei Fehlschlag | Erwarteter Zustand, wenn das Ziel nicht erreicht werden kann |
 | Eingehende Daten             | Welche Daten werden im Lauf des Use Case entgegengenommen? |
