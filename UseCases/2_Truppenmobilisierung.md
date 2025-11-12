@@ -1,15 +1,15 @@
 # 2. Truppenmobilisierung
 
-| Geschäftsprozess, Funktion   | Name, besteht aus zwei Wörtern. Objekt + Verb (was wird womit getan?). |
-| ---------------------------- | ------------------------------------------------------------------------------------------ |
-| Ziel, Ergebnisse             | globale Zielsetzung bei erfolgreicher Ausführung des Geschäftsprozesses |
-| Akteure                      | Rollen von Personen oder anderen Systemen, die den Geschäftsprozess auslösen oder daran beteiligt sind |
-| Vorbedingungen               | Erwarteter Zustand, bevor der Geschäftsprozess beginnt |
-| Auslösendes Ereignis         | Wenn dieses Ereignis eintritt, wird der Geschäftsprozess initiiert |
-| Nachbedingung bei Erfolg     | Erwarteter Zustand nach erfolgreicher Ausführung des Geschäftsprozess, das heißt Ergebnis des Geschäftsprozesses |
-| Nachbedingung bei Fehlschlag | Erwarteter Zustand, wenn das Ziel nicht erreicht werden kann |
-| Eingehende Daten             | Welche Daten werden im Lauf des Use Case entgegengenommen? |
-| Ausgehende Daten             | Welche Daten werden im Lauf des Use Case ausgegeben, die nicht Teil des Ergebnisses sind? |
-| Ablauf                       | Spezifikation des Geschäftsprozesses in natürlicher Sprache. Einzelne Aufgaben/Schritte nummerieren. Zunächst einen häufigen Standardfall beschreiben. |
-| Erweiterungen                | Abläufe aus Aufgaben/Schritten, die in manchen Fällen zusätzlich auszuführen sind |
-| Alternativen                 | Abläufe aus Aufgaben/Schritten, die in manchen Fällen stattdessen auszuführen sind |
+| Geschäftsprozess, Funktion   | Truppenmobilisierung durchführen                                                                                                                                                                                                                                          |
+|------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Ziel, Ergebnisse             | Der aktiver Spieler bekommt Truppen, die er wiederum auf seine eroberten Länder verteilt werden.                                                                                                                                                                          |
+| Akteure                      | Aktiver Spieler.                                                                                                                                                                                                                                                          |
+| Vorbedingungen               | Die Länder im Besitz des aktiven Spielers sind bekannt. Der vorherige Spieler hat seinen Zug abgeschlossen.                                                                                                                                                               |
+| Auslösendes Ereignis         | Der wechsel vom passiven zum aktiven Spielerstatus.                                                                                                                                                                                                                       |
+| Nachbedingung bei Erfolg     | 1. Der aktive Spieler hat T = n/3 Truppen bekommen (n = Anzahl eroberte Länder), wobei *T immer ≥ 3 ist* <br> 2. Alle verfügbaren Truppen wurden mobilisiert <br> 3. Übergang in die Kapfphase.                                                                           |
+| Nachbedingung bei Fehlschlag | Der Spieler hat mindestens 3 Truppen bekommen.                                                                                                                                                                                                                            |
+| Eingehende Daten             | 1. Anzahl der eroberten Länder <br> 2. Anzahl der Spielkarten                                                                                                                                                                                                             |
+| Ausgehende Daten             | Aktualisierten Truppenanzahlen pro Land.                                                                                                                                                                                                                                  |
+| Ablauf                       | 1. Der Spieler bekommt seine rechtmäßigen Truppen <br> 2. Der Spieler hat die Möglichkeit extra Truppen durch einlösen 3 gleicher oder 3 verschiederne Spielkarten zu erhalten <br> 3. Der aktieve Spieler verteilt seine verfügbaren Truppen auf seine Länder im Besitz. |
+| Erweiterungen                | Der Spieler hat die Möglichkeit bei 3 gleicher oder 3 verschiederne Spielkarten extra Truppen zu erhalten. Die Anzahl der Truppen die man für dadurch erhält richtet sich nach der zeitlichen Reihenfolge des Eintauschs.                                                 |
+| Alternativen                 | Durch den wechsel vom passiven zum aktieven Spieler wird sichergestellt das die Truppenmobilisierung immer stattfinded. Der aktive Spieler <strong> muss </strong> diese Phase zu Ende führen.                                                                            |
