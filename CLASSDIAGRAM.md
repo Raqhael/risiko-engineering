@@ -9,7 +9,7 @@ classDiagram
     class Player{
         -String: color
         -GameCard[]: cardHand
-        Party: activePlayer
+        -Party: activePlayer
         -MissionCard: mission
 
         +drawGameCard() void
@@ -21,7 +21,7 @@ classDiagram
 
     class Card{
         <<Interface>>
-        reveal()
+        +reveal()
     }
 
     class MissionCard{
@@ -56,8 +56,8 @@ classDiagram
         countryMap: Graph[Country, Country[]]
         -cardStack: GameCard[]
 
-        getGameCardFromStack() GameCard
-        returnCardsToStack(GameCard[3]) void
+        +getGameCardFromStack() GameCard
+        +returnCardsToStack(GameCard[3]) void
     }
 
     class Country{
