@@ -90,6 +90,6 @@ classDiagram
 
     %% Notes
     note for Game Map "The Graph shall represent the interconnected countries.
-    A Graph can be imagined as Map of a Vertex with a list of Verticies
+    A Graph can be imagined as Map of a Vertex with a list of Vertices
     (details excluded as they are non-agnostic)"
 ```
