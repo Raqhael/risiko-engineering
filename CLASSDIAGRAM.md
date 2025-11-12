@@ -57,7 +57,8 @@ classDiagram
         -cardStack: GameCard[]
 
         +getGameCardFromStack() GameCard
-        +returnCardsToStack(GameCard[3]) void
+        %% Returns the number of granted troops through the deal in of the cards. Returns 0 if the handed in Cards won't grant any troops.
+        +returnCardsToStack(GameCard[3]) int
     }
 
     class Country{
