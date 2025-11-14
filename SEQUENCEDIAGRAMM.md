@@ -9,12 +9,13 @@ sequenceDiagram
         actor P as Passiver Spieler
 
         alt Karten einlösen
-        A-)R: returnCardsToStack(GameCard[3])
+        A-)R: Spielkarten einlösen
         activate R
+        R->>R: Einlösung überprüfen
         R-->>A: Anzahl mobilisierbarer Truppen
         deactivate R
         end
-        A->>R: Anfrage Truppenkontingent
+        A->>R: Anfrage mobilisierbarer Truppen
         activate R
         R-->>A: Anzahl mobilisierbarer Truppen
         deactivate R
@@ -22,11 +23,21 @@ sequenceDiagram
 
         %%Kampfphase
         loop Angreifen
-        A->>R: Angriff auf Gebiet von P mit Würfelwurf initiieren
+        activate R
+        A->>R: Angriff auf Gebiet von P initiieren
+
+        R->>R: Würfeln
+        deactivate R
+        activate R
         R->>P: Angriffswürfelwurf mitteilen
-        P-)R: Verteidigungswürfel wählen
+
+        activate R
+        R->>R: Würfeln
+        P->>R: Verteidigungswürfel wählen
+        deactivate R
         R-->>A: Kampfresultat
         R-->>P: Kampfresultat
+        deactivate R
         end
 
 
@@ -34,6 +45,6 @@ sequenceDiagram
         A->>R: Truppenbewegungen
         A->>R: Siegbedingungen überprüfen
         R-->A: Siegprüfungsergebnis übermitteln
-        A->R: Spielkarte anfragen
+        A->>R: Spielkarte anfragen
         R-->>A: Spielkarte ausgeben
 ```
