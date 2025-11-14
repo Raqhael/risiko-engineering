@@ -2,7 +2,7 @@
 
 | Geschäftsprozess, Funktion   | Siegbedingungen prüfen |
 | ---------------------------- | ------------------------------------------------------------------------------------------ |
-| Ziel, Ergebnisse             | Es soll festgestellt werden, ob ein Spieler die Aufgabe seiner geheime Missionskarte vollständig erfüllt hat und damit das Spiel gewinnt. Zuzüglich soll geprüft werden, ob ob ein Spieler die Weltherrschaft errungen hat. |
+| Ziel, Ergebnisse             | Es soll festgestellt werden, ob ein Spieler die Aufgabe seiner geheime Missionskarte vollständig erfüllt hat und damit das Spiel gewinnt. Zuzüglich soll geprüft werden, ob ein Spieler die Weltherrschaft errungen hat. |
 | Akteure                      | Aktiver Spieler, Passiver Spieler, Spielsystem |
 | Vorbedingungen               |  Ein aktiver Spieler führt einen Zug aus, der zur Erfüllung seiner eigenen Mission, der Mission eines passiven Spielers oder zur vollständigen Kontrolle aller Gebiete, der Weltherrschaft, führt. |
 | Auslösendes Ereignis         | Abschluss einer Kampfphase, Eliminierung eines Spielers oder reguläres Ende eines Spielerzugs. |
