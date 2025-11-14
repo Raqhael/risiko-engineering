@@ -82,7 +82,7 @@ classDiagram
     Player "1" *-- "0..*" Country : owns
     Player "1" o-- "1" MissionCard : hasMission
     %% Ein Spieler hat beliebig viele (oder keine) Karten auf der Hand.
-    Player "1" o-- "0..42" GameCard : holds
+    Player "1" o-- "0..5" GameCard : holds
     MissionCard ..|> Card
     GameCard ..|> Card
     GameCard "1" o-- "1" Troop : isRepresentedBy
