@@ -1,15 +1,15 @@
 # 5. Siegbedingungen prüfen
 
-| Geschäftsprozess, Funktion   | Name, besteht aus zwei Wörtern. Objekt + Verb (was wird womit getan?). |
+| Geschäftsprozess, Funktion   | Siegbedingungen prüfen |
 | ---------------------------- | ------------------------------------------------------------------------------------------ |
-| Ziel, Ergebnisse             | globale Zielsetzung bei erfolgreicher Ausführung des Geschäftsprozesses |
-| Akteure                      | Rollen von Personen oder anderen Systemen, die den Geschäftsprozess auslösen oder daran beteiligt sind |
-| Vorbedingungen               | Erwarteter Zustand, bevor der Geschäftsprozess beginnt |
-| Auslösendes Ereignis         | Wenn dieses Ereignis eintritt, wird der Geschäftsprozess initiiert |
-| Nachbedingung bei Erfolg     | Erwarteter Zustand nach erfolgreicher Ausführung des Geschäftsprozess, das heißt Ergebnis des Geschäftsprozesses |
-| Nachbedingung bei Fehlschlag | Erwarteter Zustand, wenn das Ziel nicht erreicht werden kann |
-| Eingehende Daten             | Welche Daten werden im Lauf des Use Case entgegengenommen? |
-| Ausgehende Daten             | Welche Daten werden im Lauf des Use Case ausgegeben, die nicht Teil des Ergebnisses sind? |
-| Ablauf                       | Spezifikation des Geschäftsprozesses in natürlicher Sprache. Einzelne Aufgaben/Schritte nummerieren. Zunächst einen häufigen Standardfall beschreiben. |
-| Erweiterungen                | Abläufe aus Aufgaben/Schritten, die in manchen Fällen zusätzlich auszuführen sind |
-| Alternativen                 | Abläufe aus Aufgaben/Schritten, die in manchen Fällen stattdessen auszuführen sind |
+| Ziel, Ergebnisse             | Es soll festgestellt werden, ob der aktive Spieler seine geheime Missionskarte vollständig erfüllt hat und damit das Spiel gewinnt. |
+| Akteure                      | Aktiver Spieler, Passiver Spieler, Spielsystem |
+| Vorbedingungen               |  Ein aktiver Spieler führt einen Zug aus, der potenziell zum Erfüllen seiner Mission oder der eines anderen, passiven Spielers resultiert. |
+| Auslösendes Ereignis         | Abschluss einer Kampfphase, Eliminierung eines Spielers oder reguläres Ende eines Spielerzugs. |
+| Nachbedingung bei Erfolg     | Die Siegbedingung der jeweiligen Aktionskarte eines Spielers ist erfüllt. Das Spiel wird beendet und der Spieler mit erfüllter Missionskarte wird zum Sieger erklärt. |
+| Nachbedingung bei Fehlschlag | Die Siegbedingung der Missionskarte ist nicht erfüllt. Das Spiel wird im normalen Ablauf fortgesetzt. |
+| Eingehende Daten             | Missionskarten der Spieler; Aktueller Besitzstand der Länder und Kontinente; Status der noch aktiven Spieler. |
+| Ausgehende Daten             | Rückmeldung darüber, ob das individuelle Missionsziel erfüllt wurde. Bei erfüllter Mission zusätzlich die Information, welcher Spieler das Spiel gewonnen hat |
+| Ablauf                       | 1. Das Spielsystem liest die Missionskarte der Spieler aus. <br>2. Das Spielsystem ermittelt den aktuellen Zustand der Weltkarte (Gebietsbesitz, Kontinente, verbliebene Spieler, Armeenanzahl).<br>3. Das Spielsystem vergleicht die Missionsziele mit dem aktuellen Spielzustand.<br>4. Wenn alle Missionsbedingungen erfüllt sind, markiert das System die Mission als erfolgreich erfüllt.<br>5. Ist mindestens eine Bedingung nicht erfüllt, wird der Use Case ohne Sieg beendet. |
+| Erweiterungen                | Falls mehrere Spieler durch dieselbe Aktion eine Mission erfüllen könnten (z. B. durch Eliminierung eines Zielspielers), hat der Spieler Vorrang, der diese Spielsituation aktiv verursacht hat. |
+| Alternativen                 | Der Spieler muss seine Mission nicht aktiv prüfen lassen, da die Prüfung durch das Spielsystem erfolgt. Es existiert keine Alternative für dieses Use Case.|
