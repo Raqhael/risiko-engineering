@@ -77,7 +77,7 @@ classDiagram
         bonusTroops: int
     }
     %% Assoziazionen
-    Player "1" o-- "0..1" Party : takesRoleAs
+
     %% Ein Land gehört immer genau einem Spieler, und ein Spieler kann viele Länder besitzen. Wenn der Spieler eliminiert wird, müssen die Länder neu zugewiesen werden.
     Player "1" *-- "0..*" Country : owns
     Player "1" o-- "1" MissionCard : hasMission
@@ -94,11 +94,12 @@ classDiagram
     %% Country "1" -- "0..*" Country : isAdjacentTo // Könnte man als Graph modellieren sodass auf einem Blick klar wird das Länder miteinander verbunden sind. Auch wenn die eigentliche Logik in GameMap Graph {} liegt.
     Country "1" -- "0..1" GameCard : isDepictedOn
     Dice "2..5" *-- "1" Party : isUsedBy
+    Player "1" o-- "0..1" Party : takesRoleAs
 
     %% Notes
     note for Game Map "The Graph shall represent the interconnected countries.
     A Graph can be imagined as Map of a Vertex with a list of Vertices
     (details excluded as they are non-agnostic)"
 
-    note for Country "Die Anzahl der Würfeln wird in attack() bestimmt."
+    note for Country "Die Anzahl der Würfel wird in attack() auf Basis der jeweils stationierten Truppen sowie Benutzereingaben bestimmt."
 ```
