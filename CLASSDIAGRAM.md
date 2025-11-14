@@ -7,7 +7,7 @@ classDiagram
     note for Player "Die Missionskarte und Farbe
     erhält der Player während des Konstruktoraufrufs zugewiesen"
     class Player{
-        -String: color
+        -String: troopColor
         -GameCard[]: cardHand
         -Party: activePlayer
         -MissionCard: mission
@@ -67,7 +67,7 @@ classDiagram
         garrison: int
         continent: Continent
 
-        +attack(Player attacker) void
+        +attack(Country origin) void
         +changeOwnership(Player p) void
         +raiseGarrison(int addedTroops) void
     }
@@ -77,19 +77,29 @@ classDiagram
         bonusTroops: int
     }
     %% Assoziazionen
-    Player o-- Party
-    Player o-- Country
-    Player o-- MissionCard
-    Player o-- GameCard
+
+    %% Ein Land gehört immer genau einem Spieler, und ein Spieler kann viele Länder besitzen. Wenn der Spieler eliminiert wird, müssen die Länder neu zugewiesen werden.
+    Player "1" *-- "0..*" Country : owns
+    Player "1" o-- "1" MissionCard : hasMission
+    %% Ein Spieler hat beliebig viele (oder keine) Karten auf der Hand.
+    Player "1" o-- "0..5" GameCard : holds
     MissionCard ..|> Card
     GameCard ..|> Card
-    GameCard o-- Troop
-    GameMap *-- Country
-    Country --* Continent
-    Dice o-- Party
+    GameCard "1" o-- "1" Troop : isRepresentedBy
+    %% Eine Gamemap hat immer 42 Länder und ein Land exestiert immer nur in abhängigkeit zu einer GameMap
+    GameMap "1" *-- "42" Country : contains
+    %% Der Kartenstapel (-cardStack) ist ein Bestandteil der Karte und hat alle 42 Karten.
+    GameMap "1" o-- "42" GameCard : containsStack
+    Country "0..*" -- "1" Continent : belongsTo
+    %% Country "1" -- "0..*" Country : isAdjacentTo // Könnte man als Graph modellieren sodass auf einem Blick klar wird das Länder miteinander verbunden sind. Auch wenn die eigentliche Logik in GameMap Graph {} liegt.
+    Country "1" -- "0..1" GameCard : isDepictedOn
+    Dice "2..5" *-- "1" Party : isUsedBy
+    Player "1" o-- "0..1" Party : takesRoleAs
 
     %% Notes
     note for Game Map "The Graph shall represent the interconnected countries.
     A Graph can be imagined as Map of a Vertex with a list of Vertices
     (details excluded as they are non-agnostic)"
+
+    note for Country "Die Anzahl der Würfel wird in attack() auf Basis der jeweils stationierten Truppen sowie Benutzereingaben bestimmt."
 ```
