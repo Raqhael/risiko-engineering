@@ -1,4 +1,4 @@
-# 5. Siegbedingungen prüfen
+## Siegbedingungen prüfen
 
 | Geschäftsprozess, Funktion   | Siegbedingungen prüfen |
 | ---------------------------- | ------------------------------------------------------------------------------------------ |

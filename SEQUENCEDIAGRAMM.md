@@ -1,5 +1,4 @@
-# Risiko - Sequenzdiagramm
-
+# Sequenzdiagramm eines Spielzugs
 
 ```mermaid
 sequenceDiagram

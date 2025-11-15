@@ -1,4 +1,4 @@
-# 1. Spiel starten
+## Spiel starten
 
 | Geschäftsprozess, Funktion   | Name, besteht aus zwei Wörtern. Objekt + Verb (was wird womit getan?). |
 | ---------------------------- | ------------------------------------------------------------------------------------------ |
