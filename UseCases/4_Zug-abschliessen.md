@@ -1,4 +1,4 @@
-# 4. Zug abschließen
+## Zug abschließen
 
 | Geschäftsprozess, Funktion   | Name, besteht aus zwei Wörtern. Objekt + Verb (was wird womit getan?). |
 | ---------------------------- | ------------------------------------------------------------------------------------------ |

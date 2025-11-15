@@ -1,4 +1,4 @@
-# Risiko - Klassendiagramm
+# Klassendiagramm
 
 ```mermaid
 %% TODO: Kardinalitäten

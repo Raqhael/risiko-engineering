@@ -1,4 +1,4 @@
-# 3. Kampfphase
+## Kampfphase
 
 | Geschäftsprozess, Funktion   | Kampfphase durchführen |
 | ---------------------------- | ---------------------- |
