@@ -1,7 +1,6 @@
 # Klassendiagramm
 
 ```mermaid
-%% TODO: Kardinalitäten
 %% Klassen
 classDiagram
     note for Player "Die Missionskarte und Farbe
@@ -101,5 +100,7 @@ classDiagram
     A Graph can be imagined as Map of a Vertex with a list of Vertices
     (details excluded as they are non-agnostic)"
 
-    note for Country "Die Anzahl der Würfel wird in attack() auf Basis der jeweils stationierten Truppen sowie Benutzereingaben bestimmt."
+    note for Country "Die Anzahl der Würfel wird in attack() auf Basis
+    der jeweils stationierten Truppen 
+    sowie Benutzereingaben bestimmt."
 ```
