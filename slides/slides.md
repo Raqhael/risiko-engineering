@@ -1,16 +1,14 @@
 ---
 # try also 'default' to start simple
-theme: seriph
+theme: ./theme
 # random image from a curated Unsplash collection by Anthony
 # like them? see https://unsplash.com/collections/94734566/slidev
 background: ./assets/Risiko-Cover.jpg
 # some information about your slides (markdown enabled)
 title: Risiko
 info: |
-  ## Slidev Starter Template
-  Presentation slides for developers.
-
-  Learn more at [Sli.dev](https://sli.dev)
+  ## Systemmodellierung des Brettspielklassikers Risiko
+  Portfolio in **Kernkonzepte und Methoden des Software-Engineering**
 # apply UnoCSS classes to the current slide
 class: text-center
 # https://sli.dev/features/drawing
@@ -88,54 +86,56 @@ hide: false
 ## Kampfphase
 
 <table>
-    <tr>
-        <td>Geschäftsprozess, Funktion</td>
-        <td>Kampfphase durchführen</td>
-    </tr>
-    <tr>
-        <td>Ziel, Ergebnisse</td>
-        <td>Der aktive Spieler versucht, mit seinen Truppen aus seinen bestehenden Ländern benachbarte Spieler anzugreifen, um deren Länder zu erobern.</td>
-    </tr>
-    <tr>
-        <td>Akteure</td>
-        <td>Aktiver Spieler, Passiver Spieler</td>
-    </tr>
-    <tr>
-        <td>Vorbedingungen</td>
-        <td>Die Truppen des aktiven Spielers wurden mobilisiert. Im Angriffsquellland des aktiven Spielers befindet sich mehr als eine Truppe.</td>
-    </tr>
-    <tr>
-        <td>Auslösendes Ereignis</td>
-        <td>Abschluss der Truppenmobilisierungsphase.</td>
-    </tr>
-    <tr>
-        <td>Nachbedingung bei Erfolg</td>
-        <td>Der aktive Spieler hat mindestens ein Land erobert</td>
-    </tr>
-    <tr>
-        <td>Nachbedingung bei Fehlschlag</td>
-        <td>Der aktive Spieler hat *kein* Land erobert, aber mindestens 1 Truppe verloren</td>
-    </tr>
-    <tr>
-        <td>Eingehende Daten</td>
-        <td>Würfelwurf von aktivem und verteidigendem Spieler</td>
-    </tr>
-    <tr>
-        <td>Ausgehende Daten</td>
-        <td>Truppenverluste der kämpfenden Spieler (mind. 1 Truppe pro erfolgreicher Eroberung wird verloren)</td>
-    </tr>
-    <tr>
-        <td>Ablauf</td>
-        <td>1. Der aktive Spieler proklamiert das Zielland und das Angriffsquellland, aus welchem er angreift. &lt;br&gt; 2. Der aktive Spieler würfelt mit den Angriffswürfeln (wobei die genaue Anzahl dieser Würfel [n ∈ {1,2,3}] Teil eines separaten Anwendungsfalls ist) &lt;br&gt; 3. Der passive Spieler würfelt mit den Verteidigungswürfeln (wobei die genaue Anzahl dieser Würfel [n ∈ {1,2}] Teil eines separaten Anwendungsfalls ist) &lt;br&gt; 4. Die Ergebnisse der Würfe werden abgeglichen und der jeweils schlechtere Spieler verliert 1 Truppe pro Niederlage &lt;br&gt; 5. Schritte 2-4 werden wiederholt, bis alle Truppen im Zielland vernichtet wurden (der aktive Spieler erobert das Land), der aktive Spieler nicht mehr über genügend Truppen im Angriffsquellland verfügt oder keine weiteren Angriffe durchführen möchte (es folgt ein Wechsel von Angriffsquell-/-zielland oder die nächste Zugphase)</td>
-    </tr>
-    <tr>
-        <td>Erweiterungen</td>
-        <td>1. Berechnung der maximal erlaubten Würfel pro Spieler &lt;br&gt; 2. Auswahl der zu werfenden Würfel durch die Spieler</td>
-    </tr>
-    <tr>
-        <td>Alternativen</td>
-        <td>Durch die vorgeschaltete Truppenmobilisierungsphase ist sichergestellt, dass der Spieler technisch betrachtet **immer** daran angeschlossen die Kampfphase durchführen kann. Dennoch ist es ihm möglich, (aus taktischen Gründen) auf eine Durchführung des Anwendungsfalls `Kampfphase` zu verzichten und direkt zur Folgephase `Zug abschließen` überzugehen</td>
-    </tr>
+    <tbody>
+      <tr>
+          <td>Geschäftsprozess, Funktion</td>
+          <td>Kampfphase durchführen</td>
+      </tr>
+      <tr>
+          <td>Ziel, Ergebnisse</td>
+          <td>Der aktive Spieler versucht, mit seinen Truppen aus seinen bestehenden Ländern benachbarte Spieler anzugreifen, um deren Länder zu erobern.</td>
+      </tr>
+      <tr>
+          <td>Akteure</td>
+          <td>Aktiver Spieler, Passiver Spieler</td>
+      </tr>
+      <tr>
+          <td>Vorbedingungen</td>
+          <td>Die Truppen des aktiven Spielers wurden mobilisiert. Im Angriffsquellland des aktiven Spielers befindet sich mehr als eine Truppe.</td>
+      </tr>
+      <tr>
+          <td>Auslösendes Ereignis</td>
+          <td>Abschluss der Truppenmobilisierungsphase.</td>
+      </tr>
+      <tr>
+          <td>Nachbedingung bei Erfolg</td>
+          <td>Der aktive Spieler hat mindestens ein Land erobert</td>
+      </tr>
+      <tr>
+          <td>Nachbedingung bei Fehlschlag</td>
+          <td>Der aktive Spieler hat <i>kein</i> Land erobert, aber mindestens 1 Truppe verloren</td>
+      </tr>
+      <tr>
+          <td>Eingehende Daten</td>
+          <td>Würfelwurf von aktivem und verteidigendem Spieler</td>
+      </tr>
+      <tr>
+          <td>Ausgehende Daten</td>
+          <td>Truppenverluste der kämpfenden Spieler (mind. 1 Truppe pro erfolgreicher Eroberung wird verloren)</td>
+      </tr>
+      <tr>
+          <td>Ablauf</td>
+          <td>1. Der aktive Spieler proklamiert das Zielland und das Angriffsquellland, aus welchem er angreift. <br> 2. Der aktive Spieler würfelt mit den Angriffswürfeln (wobei die genaue Anzahl dieser Würfel [n ∈ {1,2,3}] Teil eines separaten Anwendungsfalls ist) <br> 3. Der passive Spieler würfelt mit den Verteidigungswürfeln (wobei die genaue Anzahl dieser Würfel [n ∈ {1,2}] Teil eines separaten Anwendungsfalls ist) <br> 4. Die Ergebnisse der Würfe werden abgeglichen und der jeweils schlechtere Spieler verliert 1 Truppe pro Niederlage <br> 5. Schritte 2-4 werden wiederholt, bis alle Truppen im Zielland vernichtet wurden (der aktive Spieler erobert das Land), der aktive Spieler nicht mehr über genügend Truppen im Angriffsquellland verfügt oder keine weiteren Angriffe durchführen möchte (es folgt ein Wechsel von Angriffsquell-/-zielland oder die nächste Zugphase)</td>
+      </tr>
+      <tr>
+          <td>Erweiterungen</td>
+          <td>1. Berechnung der maximal erlaubten Würfel pro Spieler <br> 2. Auswahl der zu werfenden Würfel durch die Spieler</td>
+      </tr>
+      <tr>
+          <td>Alternativen</td>
+          <td>Durch die vorgeschaltete Truppenmobilisierungsphase ist sichergestellt, dass der Spieler technisch betrachtet <b>immer</b> daran angeschlossen die Kampfphase durchführen kann. Dennoch ist es ihm möglich, (aus taktischen Gründen) auf eine Durchführung des Anwendungsfalls Kampfphase zu verzichten und direkt zur Folgephase Zug abschließen überzugehen</td>
+      </tr>
+    </tbody>
 </table>
 
 ---
