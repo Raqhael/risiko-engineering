@@ -20,6 +20,7 @@ transition: slide-left
 mdc: true
 # duration of the presentation
 duration: 35min
+hideInToc: true
 ---
 
 # Systemmodellierung des Brettspielklassikers Risiko
@@ -43,6 +44,8 @@ Portfolio in **Kernkonzepte und Methoden des Software-Engineering**
 The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
 -->
 
+---
+hideInToc: true
 ---
 
 # Inhaltsverzeichnis
