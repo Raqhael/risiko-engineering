@@ -3,11 +3,6 @@
 }
 
 .slidev-layout {
-  h1,
-  h2 {
-    color: var(--slidev-theme-primary);
-  }
-
   h1 + p {
     @apply -mt-2 opacity-50 mb-4;
   }
@@ -111,7 +106,7 @@ thead th {
   font-weight: 600;
 }
 tbody tr + tr td {
-  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  border-top: 1px solid darkgray 0.9;
 }
 .slidev-layout table tr > th:first-child,
 .slidev-layout table tr > td:first-child {

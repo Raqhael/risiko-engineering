@@ -1,6 +1,4 @@
-# Klassendiagramm
-
-```mermaid
+```mermaid {scale: 0.4}
 %% Klassen
 classDiagram
     note for Player "Die Missionskarte und Farbe
