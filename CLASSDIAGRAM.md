@@ -24,8 +24,8 @@ classDiagram
         -missionTask: String
     }
 
-    note for GameCard "Für Jokerkarten wird der Wert für `country` 
-    auf `null` gesetzt"
+    note for GameCard "For joker cards the value of 
+    `country` is set to `null`"
     class GameCard {
         -country: Country
         -branchOfService: Troop
@@ -68,7 +68,7 @@ classDiagram
         continent: Continent
 
         +attack(Country origin) void
-        +changeOwnership(Player p) void
+        -changeOwnership(Player p) void
         +raiseGarrison(int addedTroops) void
     }
 
@@ -79,7 +79,7 @@ classDiagram
     %% Assoziazionen
 
     %% Ein Land gehört immer genau einem Spieler, und ein Spieler kann viele Länder besitzen. Wenn der Spieler eliminiert wird, müssen die Länder neu zugewiesen werden.
-    Player "1" *-- "0..*" Country : owns
+    Player "1" --o "0..*" Country : owns
     Player "1" o-- "1" MissionCard : hasMission
     %% Ein Spieler hat beliebig viele (oder keine) Karten auf der Hand.
     Player "1" o-- "0..5" GameCard : holds
@@ -93,7 +93,7 @@ classDiagram
     Country "0..*" -- "1" Continent : belongsTo
     %% Country "1" -- "0..*" Country : isAdjacentTo // Könnte man als Graph modellieren sodass auf einem Blick klar wird das Länder miteinander verbunden sind. Auch wenn die eigentliche Logik in GameMap Graph {} liegt.
     Country "1" -- "0..1" GameCard : isDepictedOn
-    Dice "2..5" *-- "1" Party : isUsedBy
+    Dice "2..5" o-- "1" Party : isUsedBy
     Player "1" o-- "0..1" Party : takesRoleAs
 
     %% Notes
@@ -101,5 +101,6 @@ classDiagram
     A Graph can be imagined as Map of a Vertex with a list of Vertices
     (details excluded as they are non-agnostic)"
 
-    note for Country "The number of dice is determined in attack() based on the respective stationed troops as well as user input."
+    note for Country "The number of dice is determined in attack()
+    based on the respective stationed troops as well as user input."
 ```
