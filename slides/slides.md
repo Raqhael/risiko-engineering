@@ -174,16 +174,16 @@ layout: section
 ---
 
 <div style="display:flex; justify-content:center; gap:24px; margin-bottom: 6vh;">
-  <img alt="Kanban" src="/theme/pictures/kanban.png" style="height:6vh;" />
-  <img alt="Mermaid" src="/theme/pictures/mermaid.png" style="height:6vh;" />
+  <img alt="Kanban" src="/kanban.png" style="height:6vh;" />
+  <img alt="Mermaid" src="/mermaid.png" style="height:6vh;" />
 </div>
 
 # Zusammenarbeit
 
 <div style="display:flex; justify-content:center; gap:20px; margin-top:6vh;">
-  <img alt="GitHub" src="/theme/pictures/github.png" style="height:6vh;" />
-  <img alt="Trello" src="/theme/pictures/trello.png" style="height:6vh;" />
-  <img alt="Slidev" src="/theme/pictures/slidev.png" style="height:6vh;" />
+  <img alt="GitHub" src="/github.png" style="height:6vh;" />
+  <img alt="Trello" src="/trello.png" style="height:6vh;" />
+  <img alt="Slidev" src="/slidev.png" style="height:6vh;" />
 </div>
 
 ---
@@ -228,8 +228,10 @@ jobs:
         run: nr build --base /${{ github.event.repository.name }}/
 ```
 
-
-
+---
+layout: image
+image: /gruppenbild.jpeg
+---
 
 ---
 hide: true
@@ -379,6 +381,7 @@ Learn more: [Mermaid Diagrams](https://sli.dev/features/mermaid) and [PlantUML D
 ---
 layout: center
 class: text-center
+hide: true
 ---
 
 # Learn More
