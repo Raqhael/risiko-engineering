@@ -24,6 +24,8 @@ classDiagram
         -missionTask: String
     }
 
+    note for GameCard "Für Jokerkarten wird der Wert für `country` 
+    auf `null` gesetzt"
     class GameCard {
         -country: Country
         -branchOfService: Troop
