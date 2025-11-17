@@ -3,7 +3,7 @@
 theme: ./theme
 # random image from a curated Unsplash collection by Anthony
 # like them? see https://unsplash.com/collections/94734566/slidev
-background: ./assets/Risiko-Cover.jpg
+background: /Risiko-Cover.jpg
 # some information about your slides (markdown enabled)
 title: Risiko
 info: |
@@ -163,7 +163,7 @@ layout: section
 
 ## Kanban Board
 
-<img alt="Trello Board" src="./assets/trello-board.png" style="max-height:100%; margin:auto" />
+<img alt="Trello Board" src="/trello-board.png" style="max-height:100%; margin:auto" />
 
 ---
 
