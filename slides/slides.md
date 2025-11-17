@@ -125,7 +125,11 @@ hide: false
       </tr>
       <tr>
           <td>Ablauf</td>
-          <td>1. Der aktive Spieler proklamiert das Zielland und das Angriffsquellland, aus welchem er angreift. <br> 2. Der aktive Spieler würfelt mit den Angriffswürfeln (wobei die genaue Anzahl dieser Würfel [n ∈ {1,2,3}] Teil eines separaten Anwendungsfalls ist) <br> 3. Der passive Spieler würfelt mit den Verteidigungswürfeln (wobei die genaue Anzahl dieser Würfel [n ∈ {1,2}] Teil eines separaten Anwendungsfalls ist) <br> 4. Die Ergebnisse der Würfe werden abgeglichen und der jeweils schlechtere Spieler verliert 1 Truppe pro Niederlage <br> 5. Schritte 2-4 werden wiederholt, bis alle Truppen im Zielland vernichtet wurden (der aktive Spieler erobert das Land), der aktive Spieler nicht mehr über genügend Truppen im Angriffsquellland verfügt oder keine weiteren Angriffe durchführen möchte (es folgt ein Wechsel von Angriffsquell-/-zielland oder die nächste Zugphase)</td>
+          <td>
+          <span v-mark.box.red="1">
+          1. Der aktive Spieler proklamiert das Zielland und das Angriffsquellland, aus welchem er angreift. <br> 2. Der aktive Spieler würfelt mit den Angriffswürfeln (wobei die genaue Anzahl dieser Würfel [n ∈ {1,2,3}] Teil eines separaten Anwendungsfalls ist) <br> 3. Der passive Spieler würfelt mit den Verteidigungswürfeln (wobei die genaue Anzahl dieser Würfel [n ∈ {1,2}] Teil eines separaten Anwendungsfalls ist) <br> 4. Die Ergebnisse der Würfe werden abgeglichen und der jeweils schlechtere Spieler verliert 1 Truppe pro Niederlage <br> 5. Schritte 2-4 werden wiederholt, bis alle Truppen im Zielland vernichtet wurden (der aktive Spieler erobert das Land), der aktive Spieler nicht mehr über genügend Truppen im Angriffsquellland verfügt oder keine weiteren Angriffe durchführen möchte (es folgt ein Wechsel von Angriffsquell-/-zielland oder die nächste Zugphase)
+          </span>
+          </td>
       </tr>
       <tr>
           <td>Erweiterungen</td>
@@ -147,6 +151,13 @@ hide: false
 src: ../UseCases/5_Siegbedingungen-pruefen.md
 hide: false
 ---
+
+---
+layout: section
+---
+
+# Klassendiagramm
+
 
 ---
 src: ../CLASSDIAGRAM.md
