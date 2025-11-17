@@ -154,6 +154,28 @@ hide: false
 ---
 
 ---
+layout: section
+---
+
+# Zusammenarbeit
+
+---
+
+## Kanban Board
+
+<img alt="Trello Board" src="./assets/trello-board.png" style="max-height:100%; margin:auto" />
+
+---
+
+## Git Repository
+
+---
+
+## CI/CD Pipeline
+
+
+
+---
 hide: true
 ---
 
