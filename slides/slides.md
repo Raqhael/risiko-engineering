@@ -3,7 +3,7 @@
 theme: ./theme
 # random image from a curated Unsplash collection by Anthony
 # like them? see https://unsplash.com/collections/94734566/slidev
-background: /risiko-cover.png
+background: /Risiko-Cover.jpg
 # some information about your slides (markdown enabled)
 title: Risiko
 info: |
@@ -49,45 +49,36 @@ The last comment block of each slide will be treated as slide notes. It will be 
 
 <Toc text-sm minDepth="1" maxDepth="2" />
 
----
 
+---
 src: ../APPLICATION_LIMITS.md
 hide: false
-
 ---
 
 ---
-
 src: ../ACTORS.md
 hide: false
-
 ---
 
 ---
-
 src: ../SEQUENCEDIAGRAMM.md
 hide: false
-
 ---
 
 ---
-
-## layout: section
+layout: section
+---
 
 # Anwendungsfälle
 
 ---
-
 src: ../UseCases/1_Spiel-starten.md
 hide: false
-
 ---
 
 ---
-
 src: ../UseCases/2_Truppenmobilisierung.md
 hide: false
-
 ---
 
 ---
@@ -148,29 +139,23 @@ hide: false
 </table>
 
 ---
-
 src: ../UseCases/4_Zug-abschliessen.md
 hide: false
-
 ---
 
 ---
-
 src: ../UseCases/5_Siegbedingungen-pruefen.md
 hide: false
-
 ---
 
 ---
-
 src: ../CLASSDIAGRAM.md
 hide: false
-
 ---
 
 ---
-
-## layout: section
+layout: section
+---
 
 # Zusammenarbeit
 
@@ -188,9 +173,11 @@ hide: false
 
 ## CI/CD Pipeline
 
----
 
-## hide: true
+
+---
+hide: true
+---
 
 # Clicks Animations
 
@@ -227,9 +214,10 @@ also allows you to add
 
 </div>
 
----
 
-## hide: true
+---
+hide: true
+---
 
 # LaTeX
 
@@ -240,9 +228,7 @@ LaTeX is supported out-of-box. Powered by [KaTeX](https://katex.org/).
 Inline $\sqrt{3x-1}+(1+x)^2$
 
 Block
-
-$$
-{1|3|all}
+$$ {1|3|all}
 \begin{aligned}
 \nabla \cdot \vec{E} &= \frac{\rho}{\varepsilon_0} \\
 \nabla \cdot \vec{B} &= 0 \\
@@ -254,8 +240,8 @@ $$
 [Learn more](https://sli.dev/features/latex)
 
 ---
-
-## hide: true
+hide: true
+---
 
 # Diagrams
 
@@ -333,11 +319,10 @@ database "MySql" {
 
 Learn more: [Mermaid Diagrams](https://sli.dev/features/mermaid) and [PlantUML Diagrams](https://sli.dev/features/plantuml)
 
----
 
+---
 layout: center
 class: text-center
-
 ---
 
 # Learn More
