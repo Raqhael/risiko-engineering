@@ -81,6 +81,8 @@ src: ../UseCases/2_Truppenmobilisierung.md
 hide: false
 ---
 
+---
+
 ## Kampfphase
 
 <table>
