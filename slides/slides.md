@@ -81,6 +81,8 @@ src: ../UseCases/2_Truppenmobilisierung.md
 hide: false
 ---
 
+---
+
 ## Kampfphase
 
 <table>
@@ -159,6 +161,11 @@ layout: section
 
 ---
 src: ../CLASSDIAGRAM.md
+hide: false
+---
+
+---
+src: ../DATA_DICTIONARY.md
 hide: false
 ---
 
