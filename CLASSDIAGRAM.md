@@ -3,8 +3,7 @@
 ```mermaid
 %% Klassen
 classDiagram
-    note for Player "Die Missionskarte und Farbe
-    erhält der Player während des Konstruktoraufrufs zugewiesen"
+    note for Player "The player is assigned the Mission card and color during the constructor call."
     class Player{
         -String: troopColor
         -GameCard[]: cardHand
@@ -100,7 +99,5 @@ classDiagram
     A Graph can be imagined as Map of a Vertex with a list of Vertices
     (details excluded as they are non-agnostic)"
 
-    note for Country "Die Anzahl der Würfel wird in attack() auf Basis
-    der jeweils stationierten Truppen 
-    sowie Benutzereingaben bestimmt."
+    note for Country "The number of dice is determined in attack() based on the respective stationed troops as well as user input."
 ```
