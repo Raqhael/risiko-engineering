@@ -3,7 +3,7 @@
 theme: ./theme
 # random image from a curated Unsplash collection by Anthony
 # like them? see https://unsplash.com/collections/94734566/slidev
-background: /Risiko-Cover.jpg
+background: /risiko-thumbnail.png
 # some information about your slides (markdown enabled)
 title: Risiko
 info: |
