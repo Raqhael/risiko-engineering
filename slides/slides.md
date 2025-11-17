@@ -127,7 +127,7 @@ hide: false
           <td>Ablauf</td>
           <td>
           <span v-mark.box.red="1">
-          1. Der aktive Spieler proklamiert das Zielland und das Angriffsquellland, aus welchem er angreift. <br> 2. Der aktive Spieler würfelt mit den Angriffswürfeln (wobei die genaue Anzahl dieser Würfel [n ∈ {1,2,3}] Teil eines separaten Anwendungsfalls ist) <br> 3. Der passive Spieler würfelt mit den Verteidigungswürfeln (wobei die genaue Anzahl dieser Würfel [n ∈ {1,2}] Teil eines separaten Anwendungsfalls ist) <br> 4. Die Ergebnisse der Würfe werden abgeglichen und der jeweils schlechtere Spieler verliert 1 Truppe pro Niederlage <br> 5. Schritte 2-4 werden wiederholt, bis alle Truppen im Zielland vernichtet wurden (der aktive Spieler erobert das Land), der aktive Spieler nicht mehr über genügend Truppen im Angriffsquellland verfügt oder keine weiteren Angriffe durchführen möchte (es folgt ein Wechsel von Angriffsquell-/-zielland oder die nächste Zugphase)
+          1. Der aktive Spieler proklamiert das Zielland und das Angriffsquellland, aus welchem er angreift. <br> 2. Der aktive Spieler würfelt mit den Angriffswürfeln (wobei die genaue Anzahl dieser Würfel [n ∈ {1,2,3}] Teil eines separaten Anwendungsfalls ist) <br> 3. Der passive Spieler würfelt mit den Verteidungswürfeln (wobei die genaue Anzahl dieser Würfel [n ∈ {1,2}] Teil eines separaten Anwendungsfalls ist) <br> 4. Die Ergebnisse der Würfe werden abgeglichen und der jeweils schlechtere Spieler verliert 1 Truppe pro Niederlage <br> 5. Schritte 2-4 werden wiederholt, bis alle Truppen im Zielland vernichtet wurden (der aktive Spieler erobert das Land), der aktive Spieler nicht mehr über genügend Truppen im Angriffsquellland verfügt oder keine weiteren Angriffe durchführen möchte (es folgt ein Wechsel von Angriffsquell-/-zielland oder die nächste Zugphase)
           </span>
           </td>
       </tr>
@@ -173,7 +173,18 @@ hide: false
 layout: section
 ---
 
+<div style="display:flex; justify-content:center; gap:24px; margin-bottom: 6vh;">
+  <img alt="Kanban" src="/theme/pictures/kanban.png" style="height:6vh;" />
+  <img alt="Mermaid" src="/theme/pictures/mermaid.png" style="height:6vh;" />
+</div>
+
 # Zusammenarbeit
+
+<div style="display:flex; justify-content:center; gap:20px; margin-top:6vh;">
+  <img alt="GitHub" src="/theme/pictures/github.png" style="height:6vh;" />
+  <img alt="Trello" src="/theme/pictures/trello.png" style="height:6vh;" />
+  <img alt="Slidev" src="/theme/pictures/slidev.png" style="height:6vh;" />
+</div>
 
 ---
 
