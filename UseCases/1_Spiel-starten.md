@@ -1,15 +1,15 @@
-## Spiel starten
+# 1. Spiel starten
 
-| Geschäftsprozess, Funktion   | Name, besteht aus zwei Wörtern. Objekt + Verb (was wird womit getan?). |
-| ---------------------------- | ------------------------------------------------------------------------------------------ |
-| Ziel, Ergebnisse             | globale Zielsetzung bei erfolgreicher Ausführung des Geschäftsprozesses |
-| Akteure                      | Rollen von Personen oder anderen Systemen, die den Geschäftsprozess auslösen oder daran beteiligt sind |
-| Vorbedingungen               | Erwarteter Zustand, bevor der Geschäftsprozess beginnt |
-| Auslösendes Ereignis         | Wenn dieses Ereignis eintritt, wird der Geschäftsprozess initiiert |
-| Nachbedingung bei Erfolg     | Erwarteter Zustand nach erfolgreicher Ausführung des Geschäftsprozess, das heißt Ergebnis des Geschäftsprozesses |
-| Nachbedingung bei Fehlschlag | Erwarteter Zustand, wenn das Ziel nicht erreicht werden kann |
-| Eingehende Daten             | Welche Daten werden im Lauf des Use Case entgegengenommen? |
-| Ausgehende Daten             | Welche Daten werden im Lauf des Use Case ausgegeben, die nicht Teil des Ergebnisses sind? |
-| Ablauf                       | Spezifikation des Geschäftsprozesses in natürlicher Sprache. Einzelne Aufgaben/Schritte nummerieren. Zunächst einen häufigen Standardfall beschreiben. |
-| Erweiterungen                | Abläufe aus Aufgaben/Schritten, die in manchen Fällen zusätzlich auszuführen sind |
-| Alternativen                 | Abläufe aus Aufgaben/Schritten, die in manchen Fällen stattdessen auszuführen sind |
+| Geschäftsprozess, Funktion   | Start des Spiels und Übergang von der Vorbereitung in den aktiven Spielzustand |
+| ---------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| Ziel, Ergebnisse             | Spiel initialisieren und in einen spielbereiten Zustand überführen. |
+| Akteure                      | Aktiver Spieler<br>Passiver Spieler |
+| Vorbedingungen               | Das Spiel wird initialisiert, die Spieler werden festgelegt und erhalten ihre Karten.<br>Das Spielfeld ist vorbereitet und die Startaufstellung (Armeen, Länder etc.) aufgebaut.<br>Ziel ist ein spielbereiter Zustand, in dem der erste Spieler seinen Zug mit der Truppenmobilisierung beginnen kann. |
+| Auslösendes Ereignis         | Alle Spieler sind dem Spiel beigetreten.<br>Das Spielsystem bestätigt, dass die Initialisierung beginnen soll. |
+| Nachbedingung bei Erfolg     | Das Spiel befindet sich im Zustand „Spiel läuft / Erste Phase des ersten Zuges“.<br>Der aktive Spieler (Startspieler) ist festgelegt und beginnt die Phase der Truppenmobilisierung. |
+| Nachbedingung bei Fehlschlag | Rückkehr in den Zustand „Spielvorbereitung/Lobby“ oder Wechsel in einen „Fehlerzustand“. |
+| Eingehende Daten             | Anzahl der teilnehmenden Spieler<br>Gewählte Spielvariante (z. B. Missions-Risiko, Weltherrschaft) |
+| Ausgehende Daten             | Startspieler<br>Verteilung der Länder und Startarmeen<br>Aktueller Spielbrett-/Spielzustand<br>Ausgeteilte Missionskarten (falls relevant) |
+| Ablauf                       | 1. Spieler bestimmen: Reihenfolge festlegen (z. B. würfeln).<br>2. Karten/Territorien austeilen: Territorienkarten mischen und gleichmäßig verteilen. Jeder Spieler erhält seine Länder auf dem Brett.<br>3. Startarmeen zuweisen: Jeder Spieler erhält abhängig von der Spieleranzahl eine festgelegte Anzahl an Startarmeen.<br>4. Startaufstellung: Spieler platzieren ihre Startarmeen auf ihren Territorien.<br>5. Missionskarten austeilen (falls Missions-Risiko): Karten mischen und zufällig verteilen.<br>6. Startspieler festlegen.<br>7. Statuswechsel: Spielzustand wird auf „Spiel läuft“ gesetzt und der Startspieler beginnt die Truppenmobilisierung. |
+| Erweiterungen                | Zusätzliche Schritte, die in bestimmten Varianten auftreten können (z. B. alternative Missionszuweisungen). |
+| Alternativen                 | Falls zu wenige Spieler teilnehmen: Rückkehr zur Lobby.<br>Falls ein Fehler während der Initialisierung auftritt: Neuversuch oder Abbruch mit Fehlermeldung. |
