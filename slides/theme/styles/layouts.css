@@ -142,3 +142,16 @@ tbody tr + tr td {
 .slidev-md .mermaid {
   margin: 0.5rem 0 5rem;
 }
+
+.table-scroll {
+    max-height: calc(100vh - 8rem);
+    overflow-y: auto;
+    overflow-x: auto;
+}
+
+.table-scroll table {
+    display: table;
+    width: 100%;
+}
+
+

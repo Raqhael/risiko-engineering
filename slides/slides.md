@@ -20,6 +20,7 @@ transition: slide-left
 mdc: true
 # duration of the presentation
 duration: 35min
+hideInToc: true
 ---
 
 # Systemmodellierung des Brettspielklassikers Risiko
@@ -43,6 +44,8 @@ Portfolio in **Kernkonzepte und Methoden des Software-Engineering**
 The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
 -->
 
+---
+hideInToc: true
 ---
 
 # Inhaltsverzeichnis
@@ -136,6 +139,8 @@ hide: false
 </table>
 ---
 
+---
+
 ## Kampfphase
 
 <table>
@@ -180,17 +185,17 @@ hide: false
           <td>Ablauf</td>
           <td>
           <span v-mark.box.red="1">
-          1. Der aktive Spieler proklamiert das Zielland und das Angriffsquellland, aus welchem er angreift. <br> 2. Der aktive Spieler würfelt mit den Angriffswürfeln (wobei die genaue Anzahl dieser Würfel [n ∈ {1,2,3}] Teil eines separaten Anwendungsfalls ist) <br> 3. Der passive Spieler würfelt mit den Verteidigungswürfeln (wobei die genaue Anzahl dieser Würfel [n ∈ {1,2}] Teil eines separaten Anwendungsfalls ist) <br> 4. Die Ergebnisse der Würfe werden abgeglichen und der jeweils schlechtere Spieler verliert 1 Truppe pro Niederlage <br> 5. Schritte 2-4 werden wiederholt, bis alle Truppen im Zielland vernichtet wurden (der aktive Spieler erobert das Land), der aktive Spieler nicht mehr über genügend Truppen im Angriffsquellland verfügt oder keine weiteren Angriffe durchführen möchte (es folgt ein Wechsel von Angriffsquell-/-zielland oder die nächste Zugphase)
+          1. Der aktive Spieler proklamiert das Zielland und das Angriffsquellland, aus welchem er angreift. <br> 2. Der aktive Spieler würfelt mit den Angriffswürfeln, wobei die genaue Anzahl dieser Würfel [n ∈ {1,2,3}] Teil eines separaten Anwendungsfalls ist. <br> 3. Der passive Spieler würfelt mit den Verteidigungswürfeln, wobei die genaue Anzahl dieser Würfel [n ∈ {1,2}] Teil eines separaten Anwendungsfalls ist. <br> 4. Die Ergebnisse der Würfe werden abgeglichen und der jeweils schlechtere Spieler verliert 1 Truppe pro Niederlage. <br> 5. Schritte 2-4 werden wiederholt, bis alle Truppen im Zielland vernichtet wurden - der aktive Spieler erobert das Land, der aktive Spieler nicht mehr über genügend Truppen im Angriffsquellland verfügt oder keine weiteren Angriffe durchführen möchte. Es folgt ein Wechsel von Angriffsquell-/-zielland oder die nächste Zugphase.
           </span>
           </td>
       </tr>
       <tr>
           <td>Erweiterungen</td>
-          <td>1. Berechnung der maximal erlaubten Würfel pro Spieler <br> 2. Auswahl der zu werfenden Würfel durch die Spieler</td>
+          <td>1. Berechnung der maximal erlaubten Würfel pro Spieler. <br> 2. Auswahl der zu werfenden Würfel durch die Spieler.</td>
       </tr>
       <tr>
           <td>Alternativen</td>
-          <td>Durch die vorgeschaltete Truppenmobilisierungsphase ist sichergestellt, dass der Spieler technisch betrachtet <b>immer</b> daran angeschlossen die Kampfphase durchführen kann. Dennoch ist es ihm möglich, (aus taktischen Gründen) auf eine Durchführung des Anwendungsfalls Kampfphase zu verzichten und direkt zur Folgephase Zug abschließen überzugehen</td>
+          <td>Durch die vorgeschaltete Truppenmobilisierungsphase ist sichergestellt, dass der Spieler technisch betrachtet <b>immer</b> daran angeschlossen die Kampfphase durchführen kann. Dennoch ist es ihm möglich, (aus taktischen Gründen) auf eine Durchführung des Anwendungsfalls Kampfphase zu verzichten und direkt zur Folgephase Zug abschließen überzugehen.</td>
       </tr>
     </tbody>
 </table>
@@ -226,7 +231,18 @@ hide: false
 layout: section
 ---
 
+<div style="display:flex; justify-content:center; gap:24px; margin-bottom: 6vh;">
+  <img alt="Kanban" src="/kanban.png" style="height:6vh;" />
+  <img alt="Mermaid" src="/mermaid.png" style="height:6vh;" />
+</div>
+
 # Zusammenarbeit
+
+<div style="display:flex; justify-content:center; gap:20px; margin-top:6vh;">
+  <img alt="GitHub" src="/github.png" style="height:6vh;" />
+  <img alt="Trello" src="/trello.png" style="height:6vh;" />
+  <img alt="Slidev" src="/slidev.png" style="height:6vh;" />
+</div>
 
 ---
 
@@ -240,8 +256,8 @@ layout: section
 
 <img alt="Trello Board" src="/github-repository.png" style="max-height:100%; margin:auto" />
 
----
-layout: two-cols
+<!--Mermaid, Markdown & Slidev (Slides mit HTML/CSS)-->
+
 ---
 
 ## CI/CD Pipeline
@@ -270,8 +286,10 @@ jobs:
         run: nr build --base /${{ github.event.repository.name }}/
 ```
 
-
-
+---
+layout: image
+image: /gruppenbild.jpeg
+---
 
 ---
 hide: true
@@ -421,6 +439,7 @@ Learn more: [Mermaid Diagrams](https://sli.dev/features/mermaid) and [PlantUML D
 ---
 layout: center
 class: text-center
+hide: true
 ---
 
 # Learn More
