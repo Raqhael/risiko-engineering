@@ -199,8 +199,6 @@ layout: section
 <img alt="Trello Board" src="/github-repository.png" style="max-height:100%; margin:auto" />
 
 ---
-layout: two-cols
----
 
 ## CI/CD Pipeline
 
