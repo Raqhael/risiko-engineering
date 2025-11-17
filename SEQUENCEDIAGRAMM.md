@@ -22,6 +22,9 @@ sequenceDiagram
     deactivate R
 
     A->>R: Truppen Platzierung
+    activate R
+    deactivate R
+    R->>R: Siegbedingungen prüfen
 
 
 %%Angreifen auf Gebiet von passiever Spiel
@@ -32,25 +35,33 @@ sequenceDiagram
 
         R->>R: Würfel Angreifer (Aktiver Spieler)
         R->>P: Augenzahl Angriffswürfel übermitteln
-        P->>R: Verteidigungswürfel wählen
+        activate P
+        P-->>R: Verteidigungswürfel wählen
+        deactivate P
         R->>R: Würfel Verteidiger (Passiver Spieler)
 
 
 
         R-->>A: Kampfresultat (Verluste)
         R-->>P: Kampfresultat (Verluste)
-
+        deactivate R
         alt Gebiet erobert
             A->>R: Truppen nachziehen
+            activate R
+            deactivate R
         end
-
-        deactivate R
+        
     end
+    R->>R: Siegbedingungen prüfen
 
 %%Truppen verschieben und Aufräumen
     Note over A,R: PHASE 3: Truppen verschieben und Aufräumen
     alt Truppen manoevrieren
+        loop Beliebige Anzahl Truppenmanöver
         A->>R: Truppen-Manöver
+            activate R
+            deactivate R
+        end
     end
     alt Gebiet erobert
         A->>R: Spielkarte anfordern
