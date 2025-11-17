@@ -178,9 +178,38 @@ layout: section
 
 ## Git Repository
 
+<img alt="Trello Board" src="/github-repository.png" style="max-height:100%; margin:auto" />
+
+---
+layout: two-cols
 ---
 
 ## CI/CD Pipeline
+
+```yml {all|35-37}{lines:true, startLine:17}
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 'lts/*'
+
+      - name: Setup @antfu/ni
+        run: npm i -g @antfu/ni
+
+      - name: Install dependencies
+        working-directory: slides
+        run: nci
+
+      - name: Build
+        working-directory: slides
+        run: nr build --base /${{ github.event.repository.name }}/
+```
+
 
 
 
