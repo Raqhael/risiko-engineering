@@ -2,14 +2,14 @@
 
 | Geschäftsprozess, Funktion   | Zug abschließen |
 | ---------------------------- | ------------------------------------------------------------------------------------------ |
-| Ziel, Ergebnisse             | Der aktive Spieler schließt seinen Zug ab und kann optional Truppen manövriert. Falls in diesem Zug mindestens ein Gebiet erobert wurde, fordert er eine Spielkarte an. Daraufhin wird der nächste Spieler aktiv.|
-| Akteure                      | Akvier Spieler |
+| Ziel, Ergebnisse             | Der aktive Spieler schließt seinen Zug ab und der nächste Spieler und setzt den nächsten Spieler auf aktiv.|
+| Akteure                      | Aktiver Spieler, Passiver Spieler. |
 | Vorbedingungen               | Abschluss der Truppenmobilisierung und Kampfphase. |
 | Auslösendes Ereignis         | Die Kampfphase des aktiven Spielers wird beendet. |
-| Nachbedingung bei Erfolg     | - |
-| Nachbedingung bei Fehlschlag | - |
-| Eingehende Daten             | 1. Information, ob in diesem Zug mindestens ein Gebiet erobert wurde <br>2. Status des Kartenstapels (verfügbare Spielkarten) <br>3. Spielerreihenfolge und aktueller aktiver Spieler |
-| Ausgehende Daten             | 1. Aktualisierter Truppenbestand pro Land nach dem Truppen-Manöver <br>2. Ggf. aktualisierter Kartenbestand des aktiven Spielers und des Kartenstapels <br>3. Neuer aktiver Spieler für den nächsten Zug |
-| Ablauf                       | 2. [alt: Truppen manövrieren] Der aktive Spieler kann ein oder mehrere Truppen-Manöver ausführen (Truppen von einem eigenen Gebiet auf ein benachbartes eigenes Gebiet verschieben). Das System prüft jede Verschiebung auf Gültigkeit und aktualisiert die Truppenstände.3. Der aktive Spieler kann das Truppen-Manövrieren jederzeit beenden.4. [alt: Gebiet erobert] Falls der aktive Spieler in diesem Zug mindestens ein Gebiet erobert hat, kann er über die Aktion „Spielkarte anfordern“ eine Gebietskarte beim Spielsystem anfordern.5. Das Spielsystem prüft, ob der Spieler zum Kartenerhalt berechtigt ist (mindestens ein Gebiet erobert, noch keine Karte in diesem Zug erhalten) und ob Karten im Stapel verfügbar sind.6. Ist die Prüfung erfolgreich, führt das Spielsystem „Karte ausgeben“ aus, zieht eine Spielkarte aus dem Stapel, aktualisiert den Stapel (ggf. intern mehrfach, z. B. bei Mischen/Neuaufbau) und übergibt die Spielkarte an den aktiven Spieler.7. Das System setzt zugbezogene Statusinformationen (z. B. „Gebiet erobert“, Angriffszähler) zurück.8. Das Spielsystem aktiviert den nächsten Spieler in der Reihenfolge als neuen aktiven Spieler und beendet damit den Zug des bisherigen aktiven Spielers.|
-| Erweiterungen                | Spielkarte anfordern. Truppen manövrieren|
-| Alternativen                 | 1. Der aktive Spieler kann auf das Truppen manövrieren verzichten. <br>2. Insofern der aktive Spieler kein Gebiet erobert hat, kann er keine Spielkarte anfordern.  |
+| Nachbedingung bei Erfolg     | Der aktuelle Spieler deaktiviert und der nächste Spieler aktiviert. |
+| Nachbedingung bei Fehlschlag | Der aktuelle Spieler bleibt so lange am Zug bis er erfolgreich abgeschlossen wird. |
+| Eingehende Daten             | 1. Information, ob in diesem Zug mindestens ein Gebiet erobert wurde. <br>2. Spielerreihenfolge und aktueller aktiver Spieler. |
+| Ausgehende Daten             | 1. Aktualisierter Truppenbestand pro Land. <br>2. Neuer aktiver Spieler für den nächsten Zug. |
+| Ablauf                       | 1. Der aktive Spieler kann eine oder mehrere Truppen in andere, von ihm besetzte, benachbarte Gebiete verschieben. <br>2. Der aktive Spieler kann das <span v-mark.highlight.red="1">Truppenmanöver</span> jederzeit beenden. <br>3. Falls der aktive Spieler in diesem Zug mindestens ein Gebiet erobert hat, kann er über die Aktion <span v-mark.highlight.red="2">„Spielkarte anfordern“</span> eine Gebietskarte beim Spielsystem anfordern, welche ihm bei erfolgreicher Prüfung ausgegeben wird. <br> 4. Der nächste Spieler der Reihenfolge wird aktiviert, der bisherige deaktiviert.|
+| Erweiterungen                | 1. Spielkarte anfordern. <br>2. Truppen manövrieren.|
+| Alternativen                 | 1. Insofern der aktive Spieler kein Gebiet erobert hat, kann er keine Spielkarte anfordern.<br>2. Der aktive Spieler kann auf das Truppenmanövrieren verzichten.  |

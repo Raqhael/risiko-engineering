@@ -73,3 +73,5 @@ sequenceDiagram
 
     R->>R: Siegbedingungen prüfen
 ```
+
+<!--Raphael-->
