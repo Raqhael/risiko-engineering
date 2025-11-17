@@ -163,6 +163,11 @@ hide: false
 ---
 
 ---
+src: ../DATA_DICTIONARY.md
+hide: false
+---
+
+---
 layout: section
 ---
 
