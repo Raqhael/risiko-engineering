@@ -24,6 +24,8 @@ classDiagram
         -missionTask: String
     }
 
+    note for GameCard "Für Jokerkarten wird der Wert für `country` 
+    auf `null` gesetzt"
     class GameCard {
         -country: Country
         -branchOfService: Troop
@@ -51,7 +53,9 @@ classDiagram
     class GameMap{
         countryMap: Graph[Country, Country[]]
         -cardStack: GameCard[]
+        -cardTray: GameCard[]
 
+        -renewGameCardStack() void
         +getGameCardFromStack() GameCard
         %% Returns the number of granted troops through the deal in of the cards. Returns 0 if the handed in Cards won't grant any troops.
         +returnCardsToStack(GameCard[3]) int
