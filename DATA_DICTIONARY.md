@@ -1,14 +1,14 @@
 # Data Dictionary
 
-<div style="max-height:80%; overflow-y:auto;">
+<div style="max-height:80%; overflow-y:scroll;">
 <table>
-  <thead>
+  <thead style="position:sticky; top:0;background: white">
     <tr>
-      <th>Name</th>
-      <th>Beschreibung</th>
-      <th>Eigenschaften</th>
-      <th>Verwendung</th>
-      <th>Instanzen</th>
+      <th><b>Name</b></th>
+      <th><b>Beschreibung</b></th>
+      <th><b>Eigenschaften</b></th>
+      <th><b>Verwendung</b></th>
+      <th><b>Instanzen</b></th>
     </tr>
   </thead>
   <tbody>
@@ -16,28 +16,28 @@
       <td>Dice</td>
       <td>Der Würfel (Dice) erzeugt Zufallswerte zwischen 1..6 und dient dazu, Angriffs- und Verteidigungswürfe durchzuführen. Ein Player kann mehrere Würfel gleichzeitig einsetzen (Angreifer 1..3, Verteidiger 1..2).</td>
       <td>Wurfwert (1..6)<br>Angabe, ob der Würfel ein Verteidigungs- oder Angriffswürfel ist</td>
-      <td>Zum durchführe der Würfelwürfe</td>
+      <td>Zum Durchführen der Würfelwürfe</td>
       <td>Angreiferwürfel (1–3 Stück)<br>Verteidigerwürfel (1–2 Stück)</td>
     </tr>
     <tr>
       <td>Player</td>
       <td>Der Spieler (Player)  stellt einen teilnehmenden Spieler im Risiko-Spiel dar. Ein Spiele besitzt eine bestimmte Armee-Farbe, kontrolliert seine eingenommenen Länder auf der Karte, verwaltet Truppen, GameCards und ggf. Missionskarten. Er führt die Spielphasen durch (Truppenmobilisierung, Kampfphase und das Abschließen des Zuges). Hierbei interagiert mit anderen Spielern auf Basis der Spielregeln.</td>
       <td>Name<br>Farbe<br>kontrollierte Länder<br>verfügbare Truppen<br>Besitz von Gebietskarten</td>
-      <td>Zum durchführen aller Usecases</td>
+      <td>Zum Durchführen aller Usecases</td>
       <td>2..n</td>
     </tr>
     <tr>
       <td>Enumeration - Party</td>
-      <td>-------------</td>
-      <td>-----------------</td>
-      <td>Zur ordentlichen zuordnung der Spieler und Truppen</td>
-      <td>Rot, Blau, Grün, Gelb, Schwarz, Lila</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Zur ordentlichen Zuordnung des Spielerstatus & der Würfel</td>
+      <td>Attacker (aktiv), Defender (passiv)</td>
     </tr>
     <tr>
       <td>MissionCard</td>
       <td>Die Missionskarte (MissionCard) repräsentiert eine Zielkarte im Risiko-Spiel. Sie definiert eine spezielle Siegbedingung, die ein Spieler erfüllen muss, um das Spiel vorzeitig zu gewinnen (z. B. Eliminierung eines bestimmten Spielers, Kontrolle bestimmter Kontinente oder Besitz einer Mindestanzahl an Ländern).</td>
       <td>Eindeutige Karten ID<br>Text der Mission<br>Art der Mission (Eliminierung, Kontinente, Länderanzahl)</td>
-      <td>Wird verwendet um das Spiel zu Gewinnen</td>
+      <td>Wird verwendet, um das Spiel zu Gewinnen</td>
       <td>14</td>
     </tr>
     <tr>
@@ -48,8 +48,8 @@
       <td>42 + 2 Joker</td>
     </tr>
     <tr>
-      <td>Interface-Card</td>
-      <td>Die Interface-Card definiert die gemeinsamen Eigenschaften und Methoden, die alle Kartenarten im Spiel teilen. Sowohl GameCard als auch MissionCard implementieren dieses Interface. Es stellt sicher, dass alle Karten eindeutig identifizierbar sind und eine allgemeine Beschreibung besitzen.</td>
+      <td>Interface - Card</td>
+      <td>Das Card-Interface definiert die gemeinsamen Eigenschaften und Methoden, die alle Kartenarten im Spiel teilen. Sowohl GameCard als auch MissionCard implementieren dieses Interface. Es stellt sicher, dass alle Karten eindeutig identifizierbar sind und eine allgemeine Beschreibung besitzen.</td>
       <td>Text der Siegbedingung<br>Kategorie (z. B. Eliminierung, Kontinente, Länderanzahl)</td>
       <td>Beinhaltet Attribute die Gamecard und MissionCard gemeinsam haben</td>
       <td>GameCard, MissionCard (beide instanziieren dieses Interface)</td>
@@ -59,7 +59,7 @@
       <td>--------------</td>
       <td>zugehöriges Land<br>Infanterie/Kavallerie/Artillerie</td>
       <td>Beinhaltet die Arten von Truppenkarten</td>
-      <td>-----------</td>
+      <td>Joker, Canon, Cavalry, Soldier</td>
     </tr>
     <tr>
       <td>GameMap</td>
@@ -77,9 +77,9 @@
     </tr>
     <tr>
       <td>Continent</td>
-      <td>Ein Kontinent (Continent) fasst mehrere benachbarte Länder zu einer logischen Region auf der Weltkarte zusammen. Jeder Kontinent besitzt einen festen Bonus an zusätzlichen Truppen, der einem Spieler gewährt wird, wenn alle Länder dieses Kontinents von ihm kontrolliert werden.</td>
+      <td>Ein Kontinent (Continent) fasst mehrere benachbarte Länder zu einer logischen Region auf der Weltkarte zusammen. Jeder Kontinent besitzt einen festen Bonus an zusätzlichen Truppen, der einem Spieler gewährt wird, der alle Länder dieses Kontinents kontrolliert.</td>
       <td>Name<br>Länder<br>Bonustruppen</td>
-      <td>Wird zum erreichen der Gewinnbedingung als auch zum einlösen von Extratruppen verwendet.</td>
+      <td>Zum Erreichen bestimmter Missionen als auch zum Erhalt von Bonustruppen verwendet.</td>
       <td>6</td>
     </tr>
   </tbody>
