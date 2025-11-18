@@ -4,7 +4,7 @@
 
 .slidev-layout {
   h1 + p {
-    @apply -mt-2 opacity-50 mb-4;
+    @apply -mt-2 opacity-90 mb-4;
   }
 
   p + h2,

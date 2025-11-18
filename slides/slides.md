@@ -27,8 +27,10 @@ hideInToc: true
 
 Portfolio in **Kernkonzepte und Methoden des Software-Engineering**
 
-<div @click="$slidev.nav.next" class="mt-12 py-1" hover:bg="white op-10">
-  <carbon:arrow-right />
+<small>Mikail Mert Demirel, Niklas Felix Ulbrich, Raphael Buller & Dietrich Poensgen</small>
+
+<div @click="$slidev.nav.next" class="mt-12 py-1 mx-auto w-10 h-10 grid place-items-center hover:cursor-pointer rounded-full" hover:bg="white op-20">
+  <carbon:arrow-right class="stroke-white stroke-2 w-6 h-6" />
 </div>
 
 <div class="abs-br m-6 text-xl">
@@ -60,11 +62,6 @@ hide: false
 
 ---
 src: ../ACTORS.md
-hide: false
----
-
----
-src: ../SEQUENCEDIAGRAMM.md
 hide: false
 ---
 
@@ -152,6 +149,11 @@ hide: false
 
 ---
 src: ../UseCases/5_Siegbedingungen-pruefen.md
+hide: false
+---
+
+---
+src: ../SEQUENCEDIAGRAMM.md
 hide: false
 ---
 
